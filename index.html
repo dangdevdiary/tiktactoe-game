@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+    <title>tic tac toe</title>
+</head>
+<body>
+    <div class="app">
+        <div class="modal">
+            <div class="home">
+                <h1>TIC TAC TOE</h1>
+                
+                <div class="mode">
+                    <h2>Game Mode:</h2>
+                    <a class="mode-btn" onclick="cpu()" href="#" style="--color-btn: #1e9bff">
+                        <span>computer</span>
+                        <i></i>
+                    </a>
+                    <a class="mode-btn" onclick="human()" href="#" style="--color-btn: #6eff3e">
+                        <span>2 players</span>
+                        <i></i>
+                    </a>
+                    <div class="computer-mode">
+                        <a href="#" id="mode-easy" onclick="cpuMode(id)">
+                            <span>easy</span>
+                        </a>
+                        <a href="#" id="mode-hard"  onclick="cpuMode(id)">
+                            <span>hard</span>
+                        </a>
+                    </div>
+                </div>
+
+                <h3>WISH YOU HAVE FUN GAME!</h3>
+            </div>
+        </div>
+        <div id="game">
+            <h1 id="title">TIC TAC TOE</h1>
+            <div class="time-limited">
+                <input placeholder="time limited" type="number">
+                <button onclick="handleTimeLimited()" class="">choose</button>
+            </div>
+            <div class="clock"></div>
+            <table >
+                <tr>
+                    <td class="cell" id="0"></td>
+                    <td class="cell" id="1"></td>
+                    <td class="cell" id="2"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="3"></td>
+                    <td class="cell" id="4"></td>
+                    <td class="cell" id="5"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="6"></td>
+                    <td class="cell" id="7"></td>
+                    <td class="cell" id="8"></td>
+                </tr>
+            </table>
+            <div class="end-game">
+                <div class="text">abc</div>
+                <button class="btn-reset" onclick="startGame()">Reset</button>
+            </div>
+            <div class="turn">Turn of player: <span class="turn-player"></span></div>
+            <div class="winner">
+                <span class="x-win">Player X: <i>0</i></span>
+                <span class="o-win">Player O: <i>0</i></span>
+            </div>
+            <div class="quit-game" onclick="quitGame()">
+                <a class="btn-quit">Quit Game</a>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
